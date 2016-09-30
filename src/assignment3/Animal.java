@@ -1,7 +1,7 @@
 package assignment3;
 
 /**
- *
+ *  
  * REQUIREMENT 2
  * 
  * The animal class must be abstract and implements a constructor to set any
@@ -36,9 +36,9 @@ package assignment3;
 public abstract class Animal {
     private final int legs;
     private final String speakParameter;
-    protected int xCoordinate;
-    protected int yCoordinate;
-    public Animal(int legNum,String mySound) {
+    private int xCoordinate;
+    private int yCoordinate;
+    protected Animal(int legNum,String mySound) {
         this.legs = legNum;
         this.speakParameter = mySound;
     }
@@ -46,10 +46,13 @@ public abstract class Animal {
         return this.legs;
     }
     public void speak() {
-        System.out.println(speakParameter);
+        System.out.print(speakParameter);
     }
-    public void walkTo(int x, int y) {
+    protected void walkTo(int x, int y) {
         this.xCoordinate = x;
         this.yCoordinate = y;
+    }
+    public int[] whereAmI() {
+        return new int[] {xCoordinate,yCoordinate};
     }
 }
