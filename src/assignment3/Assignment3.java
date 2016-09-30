@@ -1,5 +1,8 @@
 package assignment3;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Instructions for this assignment.  Download this template from GitHub, fill in
  * the author comment below with your name and implement the requirements below.
@@ -8,7 +11,7 @@ package assignment3;
  * If a requirement is not implemented, you will receive 0 points.
  * Requirements are worth 50 points each.
  * 
- * @author myname
+ * @author bennett
  * 
  * REQUIREMENT 1:
  * 
@@ -99,6 +102,18 @@ package assignment3;
 public class Assignment3 {
 
     public static void main(String[] args) {
+        List<Animal> myAnimals = new ArrayList();
+        myAnimals.add(new Cat());
+        myAnimals.add(new Dog());
+        myAnimals.add(new Mouse());
+        myAnimals.add(new Human());
+        for (Animal a : myAnimals) {
+            System.out.println("This animal has " + a.getLegs() + " legs.");
+            System.out.print("This animal says \""); a.speak(); System.out.println(".\"");
+            a.walkTo(0, 1);
+            System.out.println("This animal is located at " + a.whereAmI()[0] + ", " + a.whereAmI()[1] + ".\n\n");
+            
+        }
     }
     
 }
