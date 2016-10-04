@@ -9,10 +9,8 @@ package quarter1;
  *
  * @author student
  */
-public class Quarter1 {
+public class Quarter1Skyler {
     public static void main(String[] args) {
-        Quarter1Skyler.main(args);
-        Quarter1Eric.main(args);
-        Quarter1Bennett.main(args);
+        
     }
 }
