@@ -15,17 +15,45 @@ package quarter1;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class Quarter1 {
     public static List<Double> circleAreas = new ArrayList(); // Create ArrayList for circleAreas
+    public static List<Double> numList = new ArrayList();
     public static Object circleColor;
     public static int radiusEntry;
+    public static double lastEntry;
     private static final JFrame frame = new JFrame();
     private static boolean statsGiven = false;
+    private static final Scanner stdIn = new Scanner(System.in);
     
     public static void main(String[] args) { // Main method
+        nonApStuff();
+        apStuff();
+    }
+    public static void nonApStuff() {
+        boolean greaterThanOneK = true;
+        System.out.print("Please enter a number: ");
+        int input = stdIn.nextInt();
+        for (int i = 1; i<=input; i++) {
+            System.out.println(i);
+        }
+        
+        System.out.print("Please enter another number: ");
+        input = stdIn.nextInt();
+        if (input >= 0) {
+            MathFunctions.SquareRootAndAddThree(input);
+        }
+        if (lastEntry > 1000) {
+            
+        } else {
+            numList.add(lastEntry);
+        }
+        
+    }
+    public static void apStuff() {
         radiusCheck();
         colorInput();
         circleStats();
